@@ -5,15 +5,15 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 
 //Next listens for route change
-Router.onRouteChangeStart(() => {
+Router.onRouteChangeStart = () => {
     NProgress.start();
-})
-Router.onRouteChangeComplete(() => {
+}
+Router.onRouteChangeComplete = () => {
     NProgress.done();
-})
-Router.onRouteChangeError(() => {
+}
+Router.onRouteChangeError = () => {
     NProgress.done();
-})
+}
 
 const Logo = styled.h1`
     font-size: 4rem;
